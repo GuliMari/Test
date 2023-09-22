@@ -2,5 +2,5 @@
 Так как проверяла работоспособность на тестовой VM, прилагаю также Vagrantfile.
 
 Развернуть стенд с помощью `vagrant up`.
-Проверить работоспособность на `http://localhost:8080/`:
+Проверить работоспособность на `http://localhost:8082/`:
 ![Image alt](https://github.com/GuliMari/Test/blob/main/Screenshot%20from%202023-09-22%2017-24-35.png)
