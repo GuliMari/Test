@@ -7,7 +7,8 @@ services:
       - 9000
     volumes:
       - ./html:/var/www/html
-
+    networks:
+      - web
   nginx:
     build: ./nginx
     container_name: nginx
@@ -17,6 +18,8 @@ services:
       - ./html:/var/www/html
     depends_on:
       - php  
+    networks:
+      - web
 
   mysql:
       image: mysql:8.1.0
@@ -27,5 +30,11 @@ services:
       volumes:
         - ./html:/var/www/html
         - ./dbdata:/var/lib/mysql
+      networks:
+        - web  
+
 volumes:
   dbdata:
+
+networks:
+  web:
